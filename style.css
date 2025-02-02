@@ -33,6 +33,7 @@ p{
 }
 .ad p{
     font-size: 1em;
+    text-align: left;
 }
 .ad img{
     margin: 0;
