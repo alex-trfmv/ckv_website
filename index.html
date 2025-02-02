@@ -63,11 +63,25 @@
             font-size: 1.2em;
             padding: 10px;
         }
+        p{
+            font-family: Arial, Helvetica, sans-serif;
+            color: black;
+            margin-bottom: 0;
+            font-size: 2em;
+            padding: 5px;
+        }
         img{
             width: 100%;
             height: 80%;
             object-fit:cover;
             z-index: -1;
+        }
+        #strips{
+            width: 80vw;
+        }
+        #strips img{
+            width: 100%;
+            height: auto;
         }
     </style>
 </head>
@@ -99,12 +113,22 @@
         <h2>NET BINNEN</h2>
         <ul>
             <li>"Ik ben trotser op dit land dan ooit" - Koning Willem Alexander bezoekt de grootste Albert Heijn van Nederland</li>
-            <li>[INTERVIEW] Wie als eerste schiet is gay en pinky promise - Trump vertelt zijn geheim van wapenstilstand in Gaza</li>
+            <li>[INTERVIEW] Wie als eerste schiet is homo en pinky promise - Trump vertelt zijn geheim van wapenstilstand in Gaza</li>
             <li>[Economie] Alles is WEER godverdomme duurder geworden</li>
             <li>⚡ Boterham met pindakaas op de grond gevallen in Purmerend</li>
             <li>Fatbiker wordt door een auto aangereden, trekt de aanrijder uit zijn auto, rijdt weg, rijdt fietser aan, wordt uit deze auto getrokken door de fietser die op zijn beurt richting Duitsland rijdt en nooit meer gezien wordt</li>
             <li>[Foto's] Vladimir Poetin en Kim Jong Un zijn samen op vakantie</li>
         </ul>
     </section>
+    <section id="strips">
+        <p><b>Strip van de dag</b></p>
+        <p style="font-size: 1em;">(refresh om een andere te krijgen)</p>
+        <img id="randomImage" src="" alt="">
+    </section>
+    <script>
+        const images = ["strip1.png", "strip2.png", "strip3.png"];
+        const randomIndex = Math.floor(Math.random() * images.length);
+        document.getElementById('randomImage').src = images[randomIndex];
+    </script>
 </body>
 </html>
